@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import DashboardLayout from "./components/DashboardLayout";
 import DashboardHeader from "./components/DashboardHeader";
 import FinancialOverview from "./components/FinancialOverview";
 import AttentionPanel from "./components/AttentionPanel";
@@ -65,7 +64,7 @@ const Dashboard = () => {
   );
 
   return (
-    <DashboardLayout>
+    <>
       <DashboardHeader
         firstName={user.firstName}
         businessName={currentBusiness.name}
@@ -167,7 +166,7 @@ const Dashboard = () => {
           onRetry={refreshDashboard}
         />
       </div>
-    </DashboardLayout>
+    </>
   );
 };
 

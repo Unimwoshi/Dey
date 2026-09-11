@@ -41,7 +41,7 @@ function formatCurrency(value: number) {
 function CustomTooltip({ active, payload, label }: any) {
   if (!active || !payload?.length) return null
   return (
-    <div className="rounded-[4px] bg-bg-secondary border border-accent px-3 py-2 text-[12px]">
+    <div className="rounded-[4px] bg-bg-secondary border border-white-40 px-3 py-2 text-[12px]">
       <p className="text-white-64 mb-1">{label}</p>
       {payload.map((entry: any) => (
         <p key={entry.dataKey} style={{ color: entry.color }}>
@@ -107,10 +107,10 @@ const FinancialOverview = ({
             <h2 className="text-[14px] text-white-64">{period}</h2>
             <div className="flex items-center gap-4">
               <span className="flex items-center gap-1.5 text-[12px] text-white-64">
-                <span className="w-2 h-2 rounded-full bg-accent" /> Revenue
+                <span className="w-2 h-2 rounded-full bg-primary" /> Revenue
               </span>
               <span className="flex items-center gap-1.5 text-[12px] text-white-64">
-                <span className="w-2 h-2 rounded-full bg-white-40" /> Expenses
+                <span className="w-2 h-2 rounded-full bg-white-64" /> Expenses
               </span>
             </div>
           </div>
@@ -157,8 +157,8 @@ const FinancialOverview = ({
                   />
                   <YAxis hide />
                   <Tooltip content={<CustomTooltip />} cursor={{ fill: 'var(--color-white-4)' }} />
-                  <Bar dataKey="revenue" name="Revenue" fill="var(--color-accent)" radius={[4, 4, 0, 0]} />
-                  <Bar dataKey="expenses" name="Expenses" fill="var(--color-white-40)" radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="revenue" name="Revenue" fill="var(--color-primary)" radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="expenses" name="Expenses" fill="var(--color-white-64)" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
