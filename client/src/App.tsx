@@ -4,9 +4,11 @@ import Onboarding from "./onboarding/Onboarding";
 import Dashboard from "./dashboard/Dashboard";
 import Workspace from "./workspace/Workspace";
 import DashboardLayout from "./dashboard/components/DashboardLayout"
+import Finance from "./finance/Finance"
 import { DashboardProvider } from "./dashboard/context/DashboardContext";
 import { WorkspaceProvider } from "./workspace/context/WorkspaceContext";
 import { NavPreferencesProvider } from './dashboard/context/NavPreferences'
+import {FinanceProvider} from "./finance/context/FinanceContext"
 import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom";
 
 function App() {
@@ -28,7 +30,7 @@ function App() {
               </DashboardProvider>
             }
           >
-            <Route index element={<Dashboard />} />
+            <Route path="overview" index element={<Dashboard />} />
             <Route
               path="workspace"
               element={
@@ -37,6 +39,16 @@ function App() {
                 </WorkspaceProvider>
               }
             />
+
+            <Route
+              path="finance"
+              element={
+                <FinanceProvider>
+                  <Finance />
+                </FinanceProvider>
+              }
+            />
+
           </Route>
         </Routes>
       </BrowserRouter>

@@ -47,18 +47,18 @@ const WorkspaceMembers = ({ state, members, onRetry }: WorkspaceMembersProps) =>
         <ul className="flex flex-col gap-1">
           {members.map((member) => (
             <li key={member.id} className="flex items-center gap-3 px-2 py-2 rounded-[4px] hover:bg-white-8 transition-colors">
-              <span className="relative w-8 h-8 rounded-full bg-white-8 flex items-center justify-center shrink-0 overflow-hidden">
+              <div className="relative w-8 h-8 rounded-full bg-white-8 flex items-center justify-center shrink-0 overflow-hidden">
                 {member.avatarUrl ? (
                   <img src={member.avatarUrl} alt={member.name} className="w-full h-full object-cover" />
                 ) : (
                   <PiUser className="w-4 h-4 text-white-64" />
                 )}
                 <span
-                  className={`absolute bottom-0 right-0 w-2 h-2 rounded-full border border-bg-primary ${
+                  className={`absolute bottom-1 right-1 w-2 h-2 rounded-full border border-transparent ${
                     member.online ? 'bg-success' : 'bg-white-40'
                   }`}
                 />
-              </span>
+              </div>
               <div className="min-w-0">
                 <p className="text-[14px] text-white-80 truncate">{member.name}</p>
                 <p className="text-[12px] text-white-64">{member.role}</p>

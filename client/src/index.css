@@ -175,6 +175,15 @@ body {
     border-bottom: none;
 }
 
+.scrollbar-hidden{
+    -ms-overflow-style:none;
+    scrollbar-width:none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar{
+    display:none;
+}
+
 .onboarding-left-sidebar{
     display: flex;
     padding: 30px 15px;

@@ -22,7 +22,7 @@ const Sidebar = ({ userName, userAvatarUrl }: SidebarProps) => {
   return (
     <>
       <div className="flex flex-col gap-8">
-        <Link to="/dashboard" className="text-white-80 font-bold text-[20px] px-2">
+        <Link to="/dashboard/overview" className="text-white-80 font-bold text-[20px] px-2">
           Dey
         </Link>
 

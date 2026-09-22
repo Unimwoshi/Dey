@@ -107,7 +107,7 @@ const FinancialOverview = ({
             <h2 className="text-[14px] text-white-64">{period}</h2>
             <div className="flex items-center gap-4">
               <span className="flex items-center gap-1.5 text-[12px] text-white-64">
-                <span className="w-2 h-2 rounded-full bg-primary" /> Revenue
+                <span className="w-2 h-2 rounded-full bg-success" /> Revenue
               </span>
               <span className="flex items-center gap-1.5 text-[12px] text-white-64">
                 <span className="w-2 h-2 rounded-full bg-white-64" /> Expenses
@@ -157,7 +157,7 @@ const FinancialOverview = ({
                   />
                   <YAxis hide />
                   <Tooltip content={<CustomTooltip />} cursor={{ fill: 'var(--color-white-4)' }} />
-                  <Bar dataKey="revenue" name="Revenue" fill="var(--color-primary)" radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="revenue" name="Revenue" fill="var(--color-success)" radius={[4, 4, 0, 0]} />
                   <Bar dataKey="expenses" name="Expenses" fill="var(--color-white-64)" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
